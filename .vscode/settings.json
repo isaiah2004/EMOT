@@ -3,6 +3,7 @@
         "crossentropy",
         "EMOT",
         "regularizers",
+        "skimage",
         "streamlit",
         "tqdm"
     ]

@@ -6,17 +6,17 @@ from skimage.transform import resize
 from IPython.display import clear_output
 from matplotlib.pyplot import imshow
 import pandas as pd
-from tensorflow.keras.layers import *
-from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.utils import to_categorical
-from tensorflow.keras.losses import *
-from tensorflow.keras.optimizers import *
-from tensorflow.keras.activations import *
-from tensorflow.keras.metrics import *
+from tensorflow.python.keras.layers import *
+from tensorflow.python.keras.models import Sequential, Model
+from tensorflow.python.keras.utils import to_categorical
+from tensorflow.python.keras.losses import *
+from tensorflow.python.keras.optimizers import *
+from tensorflow.python.keras.activations import *
+from tensorflow.python.keras.metrics import *
 from sklearn.model_selection import train_test_split
-import tensorflow.keras as keras
+import tensorflow.python.keras as keras
 import tensorflow as tf
-from tensorflow.keras import backend as k
+from tensorflow.python.keras import backend as k
 import datetime
 import os
 import csv
@@ -24,7 +24,7 @@ import pandas as pd
 import random
 import tensorflow_addons as tfa
 from tensorflow import keras
-from tensorflow.keras import layers
+from tensorflow.python.keras import layers
 from tqdm import tqdm
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
