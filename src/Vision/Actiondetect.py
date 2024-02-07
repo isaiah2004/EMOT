@@ -7,8 +7,8 @@ from IPython.display import clear_output
 from matplotlib.pyplot import imshow
 import pandas as pd
 from tensorflow.python.keras.layers import *
-from tensorflow.python.keras.models import Sequential, Model
-from tensorflow.python.keras.utils import to_categorical
+# from tensorflow.python.keras.models import Sequential, Model
+# from tensorflow.python.keras.utils import to_categorical
 from tensorflow.python.keras.losses import *
 from tensorflow.python.keras.optimizers import *
 from tensorflow.python.keras.activations import *
@@ -553,3 +553,13 @@ model.compile(
     ],
 )
 model.summary()
+
+# assign location
+path='./ActionModal/cp.ckpt.data-00000-of-00001'
+
+model.load_weights(path)
+# TODO please add the image processing
+img=open('./ActionModal/read10_rgb_2_frame31.png','rb')
+
+predicted  = model.predict(img,batch_size = 10)
+print(predicted[0])
