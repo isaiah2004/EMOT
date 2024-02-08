@@ -572,11 +572,22 @@ model.load_weights(path)
 # img = img_to_array(img)
 # img = np.expand_dims(img, axis=0)  # model.predict expects a batch of images
 
-testarr= np.load('./src/Vision/testarr.npy')
+# testarr= np.load('./src/Vision/testarr.npy')
 
-predicted  = model.predict(testarr,batch_size = 10)
-predicted  = np.argmax(predicted,axis=1)
-print(predicted)
-labels = ['Looking_Forward', 'Raising_Hand', 'Reading', 'Sleeping', 'Standing', 'Turning_Around', 'Writting']
-for i in predicted :
-    print(labels[i])
+# predicted  = model.predict(testarr,batch_size = 10)
+# predicted  = np.argmax(predicted,axis=1)
+# print(predicted)
+# labels = ['Looking_Forward', 'Raising_Hand', 'Reading', 'Sleeping', 'Standing', 'Turning_Around', 'Writting']
+# for i in predicted :
+#     print(labels[i])
+
+
+
+def predict_action (batch):
+    predicted  = model.predict(batch,batch_size = 10)
+    predicted  = np.argmax(predicted,axis=1)
+    labels = ['Looking_Forward', 'Raising_Hand', 'Reading', 'Sleeping', 'Standing', 'Turning_Around', 'Writting']
+    predictions=[]
+    for i in predicted :
+        predictions.append(labels[i])
+    return predictions
