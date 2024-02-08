@@ -2,7 +2,7 @@
 
 This project is an advanced classroom monitoring system
 
-Python version Python 3.11.4
+Python version Python 3.10.13
 
 
 
