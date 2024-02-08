@@ -2,9 +2,11 @@
     "cSpell.words": [
         "crossentropy",
         "EMOT",
+        "imshow",
         "regularizers",
         "skimage",
         "streamlit",
+        "suptitle",
         "tqdm"
     ]
 }
