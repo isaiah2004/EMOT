@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-import APIserver.Actions as Actions
+import numpy as np
 
+import src.APIserver.Actions as Actions
+
+import sys
+print(sys.path)
 
 app = FastAPI()
 
@@ -12,12 +16,11 @@ def read_root():
 
 @app.get("/status/")
 def read_item():
-    return {"item_id": {ServerStatus}, }
-
-
+    ServerStatus=CheckServerStatus()
+    return {"status": {str(ServerStatus)}, }
 
 class PredictionRequest(BaseModel):
-    data: str
+    data: None
 
 class PredictionResponse(BaseModel):
     prediction: str
@@ -29,3 +32,14 @@ def predict(request: PredictionRequest):
     # Create the response
     response = PredictionResponse(prediction=prediction)
     return response
+
+
+def CheckServerStatus():
+    actionClassifierStatus  = Actions.ActionOnlineStatus
+    emotionClassifierStatus = Actions.ActionOnlineStatus
+
+    return [actionClassifierStatus,emotionClassifierStatus]
+
+def process_request(data):
+    prediction = Actions.predict_action(data)
+    return prediction
