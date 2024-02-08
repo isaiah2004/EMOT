@@ -1,31 +1,35 @@
-import cv2
-import glob
+# import cv2
+# import glob
+# import tensorflow as tf
+# print(tf.__version__)
+
 import numpy as np
-import matplotlib.pyplot as plt
-from skimage.transform import resize
-from IPython.display import clear_output
-from matplotlib.pyplot import imshow
-import pandas as pd
-from tensorflow.python.keras.layers import *
+# import matplotlib.pyplot as plt
+# from skimage.transform import resize
+# from IPython.display import clear_output
+# from matplotlib.pyplot import imshow
+# import pandas as pd
+from tensorflow.keras.layers import *
 # from tensorflow.python.keras.models import Sequential, Model
 # from tensorflow.python.keras.utils import to_categorical
-from tensorflow.python.keras.losses import *
-from tensorflow.python.keras.optimizers import *
-from tensorflow.python.keras.activations import *
-from tensorflow.python.keras.metrics import *
+from tensorflow.keras.losses import *
+from tensorflow.keras.optimizers import *
+from tensorflow.keras.activations import *
+from tensorflow.keras.metrics import *
 from sklearn.model_selection import train_test_split
-import tensorflow.python.keras as keras
+import tensorflow.keras as keras
 import tensorflow as tf
-from tensorflow.python.keras import backend as k
-import datetime
+from tensorflow.keras import backend as k
+# import tensorflow.python.keras.layers as layers
+# import datetime
 import os
-import csv
+# import csv
 import pandas as pd
-import random
+# import random
 import tensorflow_addons as tfa
 from tensorflow import keras
-from tensorflow.python.keras import layers
-from tqdm import tqdm
+from tensorflow.keras import layers
+# from tqdm import tqdm
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import (
@@ -59,6 +63,7 @@ from keras.models import Model
 from keras.regularizers import l2
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 labels = [
     "Looking_Forward",
@@ -555,11 +560,23 @@ model.compile(
 model.summary()
 
 # assign location
-path='./ActionModal/cp.ckpt.data-00000-of-00001'
+print(os.getcwd())
+path='./src/Vision/saves/actions'
 
 model.load_weights(path)
-# TODO please add the image processing
-img=open('./ActionModal/read10_rgb_2_frame31.png','rb')
 
-predicted  = model.predict(img,batch_size = 10)
-print(predicted[0])
+# Load and process the image
+# img_path = './src/Vision/read10_rgb_2_frame31.png'
+
+# img = load_img(img_path, target_size=(128, 128))  # assuming you need the image to be 128x128
+# img = img_to_array(img)
+# img = np.expand_dims(img, axis=0)  # model.predict expects a batch of images
+
+testarr= np.load('./src/Vision/testarr.npy')
+
+predicted  = model.predict(testarr,batch_size = 10)
+predicted  = np.argmax(predicted,axis=1)
+print(predicted)
+labels = ['Looking_Forward', 'Raising_Hand', 'Reading', 'Sleeping', 'Standing', 'Turning_Around', 'Writting']
+for i in predicted :
+    print(labels[i])
