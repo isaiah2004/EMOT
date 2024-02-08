@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 
+import cv2
+import numpy as np
+from streamlit_webrtc import webrtc_streamer
+
 st.write(
     """
 # predictor
@@ -19,12 +23,18 @@ import Vision.Actiondetect as action
 
 batch = np.load("./src/Vision/testarr.npy")
 
-st.write(batch.shape)
-st.write(
+st.sidebar.title('Model Status')
+st.sidebar.write(batch.shape)
+st.sidebar.write(
     """
 module loaded!
 """
 )
+
+
+
+
+
 
 def fetch():
     predictions = action.predict_action(batch)

@@ -7,6 +7,7 @@
         "skimage",
         "streamlit",
         "suptitle",
-        "tqdm"
+        "tqdm",
+        "webrtc"
     ]
 }
