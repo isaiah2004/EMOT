@@ -10,8 +10,6 @@ st.write(
 # df = pd.read_csv("my_data.csv")
 # st.line_chart(df)
 
-st.button("click me")
-
 import numpy as np
 import Vision.Actiondetect as action
 # import Vision.graph as graph

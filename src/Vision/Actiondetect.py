@@ -1,6 +1,6 @@
 # import cv2
 # import glob
-# import tensorflow as tf
+import tensorflow as tf
 # print(tf.__version__)
 
 import numpy as np
@@ -9,6 +9,7 @@ import numpy as np
 # from IPython.display import clear_output
 # from matplotlib.pyplot import imshow
 # import pandas as pd
+# from tensorflow.keras.layers import *
 from tensorflow.keras.layers import *
 # from tensorflow.python.keras.models import Sequential, Model
 # from tensorflow.python.keras.utils import to_categorical
@@ -63,7 +64,7 @@ from keras.models import Model
 from keras.regularizers import l2
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 from keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
+# from tensorflow.python.keras.preprocessing.image import load_img, img_to_array
 
 labels = [
     "Looking_Forward",
