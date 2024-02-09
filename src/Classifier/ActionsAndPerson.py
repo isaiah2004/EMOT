@@ -5,28 +5,34 @@ import time
 from PIL import Image
 import matplotlib as plt
 import torch
+import time
 # start webcam
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
-actions = ["Looking_forward","Raising_Hand","Reading","Sleeping","Turning_Around","Writting",]
+
+# Action list
+actions = ["Sleeping","Raising_Hand","Reading","Looking_forward","Turning_Around","Writting",]
 conf_person = 0.75
+
+
+
 # model
 
-device = torch.device('cpu')
+device =torch.device('cpu')
+print(device)
 ActionOnlineStatus=False
 
 
 model = YOLO("yolov8n.pt").to(device)
 model2 = YOLO("model/best.pt").to(device)
 
+
 ActionOnlineStatus=True
 
-
-while True:
-    success, img = cap.read()
+def label_cam(img):
     results = model(img, stream=False)
-
+    detectedAction=[]
     # coordinates
     for r in results:
         boxes = [x for x in r.boxes if int(x.cls[0]) == 0 and math.ceil((x.conf[0]*100))/100 >= conf_person ]
@@ -51,7 +57,16 @@ while True:
             thickness = 2
 
             cv2.putText(img, actions[int(frame_class.indices)], org, font, fontScale, color, thickness)
+            detectedAction.append(actions[int(frame_class.indices)])
+    return img, detectedAction
 
+
+while True:
+    success, img = cap.read()
+    currentTime=time.time()
+    img, detectedAction= label_cam(img)
+
+    # time.sleep(1)
     cv2.imshow('Webcam', img)
     if cv2.waitKey(1) == ord('q'):
         break
