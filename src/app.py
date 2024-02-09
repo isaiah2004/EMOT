@@ -62,6 +62,9 @@ def main():
             # Aggregate data for histogram
             action_counts = df['Action'].value_counts()
             st.bar_chart(action_counts)
+            st.area_chart(action_counts)
+            # pr = df.profile_report()
+            # st_profile_report(pr)
         else:
             st.write("No data to display.")
 
