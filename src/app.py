@@ -4,50 +4,18 @@ import pandas as pd
 import cv2
 import numpy as np
 from streamlit_webrtc import webrtc_streamer
+import plotly.express as px
 
-st.write(
-    """
-# predictor
-"""
-)
+import threading
 
-# df = pd.read_csv("my_data.csv")
-# st.line_chart(df)
+import requests
+import psycopg2, psycopg2.extras
+import plotly.graph_objects as go
 
-st.button("click me")
-
-import numpy as np
-import Vision.Actiondetect as action
-# import Vision.graph as graph
+from matplotlib import pyplot as plt
 
 
-batch = np.load("./src/Vision/testarr.npy")
+st.write("""# EMOT""")
 
-st.sidebar.title('Model Status')
-st.sidebar.write(batch.shape)
-st.sidebar.write(
-    """
-module loaded!
-"""
-)
-
-
-
-
-
-
-def fetch():
-    predictions = action.predict_action(batch)
-    st.write(predictions)
-
-if st.button("Make prediction"):  # data is hidden if box is unchecked
-    fetch()
-    st.image('src/Vision/one.png' ,use_column_width='auto')
-
-
-
-# st.write(predictions)
-
-# if st.checkbox("Show raw data"):  # data is hidden if box is unchecked
-#     st.write(df)
+st.sidebar.write("# Model Status")
 
