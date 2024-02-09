@@ -13,7 +13,7 @@ from datetime import datetime
 device = torch.device('cpu')
 model = YOLO("yolov8n.pt",verbose=False).to(device)
 model2 = YOLO("model/best.pt",verbose=False).to(device)
-actions = ["Looking_forward", "Raising_Hand", "Reading", "Sleeping", "Turning_Around", "Writting"]
+actions = ["Sleeping", "Raising_Hand", "Reading", "Looking_forward", "Turning_Around", "Writting"]
 conf_person = 0.75
 
 def label_cam(img):
@@ -52,6 +52,18 @@ def main():
     
     global collected_data 
 
+    def plot():
+        # Convert the collected data to a DataFrame and concatenate it with the existing df
+        df = pd.read_csv('one.csv')
+        # print(df.head(10))
+        st.write("Stopped")
+        if not df.empty:
+            # st.dataframe(df)
+            # Aggregate data for histogram
+            action_counts = df['Action'].value_counts()
+            st.bar_chart(action_counts)
+        else:
+            st.write("No data to display.")
 
     while run:
         ret, frame = cap.read()
@@ -80,20 +92,9 @@ def main():
         # Using a button to stop might not be responsive enough for real-time applications
         # Instead, the checkbox 'Run' is used to control the loop
     else:
-        if collected_data:  # Check if there is any data collected
-            # Convert the collected data to a DataFrame and concatenate it with the existing df
-            df = pd.read_csv('one.csv')
-            
-            st.write("Stopped")
-            if not df.empty:
-                st.dataframe(df)
-                # Aggregate data for histogram
-                action_counts = df.iloc[1].value_counts()
-                st.bar_chart(action_counts)
-            else:
-                st.write("No data to display.")
-        else:
-            st.write("Stopped with no actions detected.")
+        st.write("Stopped ")
+        plot()
+
 
     cap.release()
 
