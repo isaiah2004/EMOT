@@ -56,7 +56,6 @@ def main():
         # Convert the collected data to a DataFrame and concatenate it with the existing df
         df = pd.read_csv('one.csv')
         # print(df.head(10))
-        st.write("Stopped")
         if not df.empty:
             # st.dataframe(df)
             # Aggregate data for histogram
@@ -95,7 +94,6 @@ def main():
         # Using a button to stop might not be responsive enough for real-time applications
         # Instead, the checkbox 'Run' is used to control the loop
     else:
-        st.write("Stopped ")
         plot()
 
 
