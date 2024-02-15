@@ -47,7 +47,7 @@ def split_video_and_transcribe(input_video_path, output_directory):
 
     return audio_output_path, transcription_output_path
 
-input_directory = './videos/'
+input_directory = 'videos'
 output_directory = 'output'
 
 if not os.path.exists(output_directory):
