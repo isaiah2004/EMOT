@@ -1,0 +1,430 @@
+[0.00]  Okay, welcome to introductory calculus.
+[16.34]  I will start with some practical information.
+[20.00]  Then I'll tell you a little bit about the syllabus and what we will cover in this course.
+[26.48]  And then give you some examples of differential equations from physical sciences and then
+[36.02]  a little bit of integration towards the end.
+[38.42]  So for many of you, this might be the easiest course that you'll take in Oxford.
+[46.90]  But I think things will get progressively harder.
+[50.14]  So maybe in a couple of weeks, it will be interesting to everybody if today's lecture might be
+[55.98]  a bit too easy for some of you.
+[58.42]  Okay, so let me tell you some practical information.
+[69.18]  So we have 16 lectures.
+[75.22]  The lecture notes are online.
+[85.22]  Online, these are the lecture notes.
+[88.22]  These were written by CAHP Wilkins.
+[95.22]  She taught this course for a few years until last year.
+[102.62]  So we'll just follow them.
+[106.86]  I guess I should have introduced myself at some point.
+[110.22]  So the lecture, so you can call me Dan.
+[118.90]  My name is Dan Chibotaru.
+[124.06]  We'll meet twice a week.
+[128.58]  Today is special just because it's the first week we'll meet on Mondays and Wednesdays at
+[133.74]  10 a.m. so not too early.
+[139.90]  And you'll have eight problem sheets.
+[147.06]  So the first two problem sheets are online.
+[150.70]  The eight problem sheets you'll cover in four tutorials in your college.
+[163.14]  So four hours of tutorial.
+[170.50]  So I said the lecture notes online.
+[172.26]  The reading list is also online.
+[177.78]  You see online, the book that I like is Mary Boeus' mathematical methods in physical
+[190.94]  sciences.
+[196.18]  This book.
+[202.46]  And most of your colleges should have a copy of this if not the university does as well.
+[214.14]  So this book is quite concise and it has various examples from physics and engineering and
+[222.30]  so it also has the added advantage that if unlike the other books on the reading list,
+[229.06]  if you drop this one on your foot, you might be able to walk without seeing an orthopedic
+[236.06]  surgeon.
+[239.06]  All right.
+[242.42]  So that's any questions about this.
+[247.86]  Okay.
+[248.86]  Now, syllabus.
+[260.82]  So the first half of the course about seven or eight lectures will be devoted to differential
+[269.38]  equations.
+[270.38]  So this is about seven or eight lectures.
+[276.26]  You have two kinds, ordinary differential equations.
+[287.10]  All these and partial differential equations or PDs.
+[303.66]  So I'll give you some examples very soon.
+[308.22]  We'll look at fairly easy examples of differential equations.
+[312.50]  We'll learn some techniques.
+[315.66]  It's a combination, solving them.
+[317.26]  It's a combination of science and art.
+[319.70]  You have to do some educated guesses at some point.
+[323.30]  But it's quite an interesting and very useful subject.
+[330.30]  And then after that, we'll talk about line and double integrals, line integrals and
+[339.34]  double integrals.
+[342.10]  And the reason these are useful is because we will be able to compute art lengths of curves
+[354.74]  and areas of various regions in the plane or surfaces.
+[364.38]  So this is maybe three lectures.
+[371.74]  And then finally, we'll do calculus of functions in two variables.
+[387.74]  So this should be viewed as a gentle introduction into multi-variable calculus.
+[394.30]  So among the things that we'll do, we'll look at various surfaces, gradients, normal vectors,
+[406.26]  we'll look at Taylor's theorem into variables, critical points, and a little bit of Lagrange
+[417.26]  multipliers, which are useful for optimization problems.
+[429.98]  Now there is a lot of interaction between this course and other pre-limb courses that you
+[436.10]  will take.
+[438.10]  So intercalculus will be directly useful, obviously, multi-variable calculus, as I said.
+[455.78]  In a way, it's a little bit unfair.
+[459.02]  We set up the work.
+[460.82]  We do some examples for in-introduction calculus.
+[463.98]  And then the really cool result and theorems you prove in multi-variable calculus.
+[468.90]  So we just do a little bit of the groundwork towards that.
+[474.22]  You also do, these are also useful in dynamics and PDEs of you will do next term for yes,
+[486.74]  series, and PDEs.
+[490.06]  Now there is a lot of interaction between intercalculus and analysis, particularly analysis
+[497.22]  two, which is what you do next term.
+[500.14]  So there will be quite a few results from analysis that will just state and not prove, maybe
+[507.46]  prove some particular examples and so on.
+[510.38]  But real rigorous proofs you'll do in analysis next term.
+[516.82]  But then it all comes together when you revise for your exams in Trinity.
+[528.82]  So as that of first in part A, there will be lots of applied mathematics options that
+[534.42]  will continue this differential equations, this is a big option, fluid and waves, et cetera.
+[540.38]  So this is a very useful course.
+[542.82]  It's also mandatory so you have to be here.
+[550.22]  So now let me give you some examples of where all these might appear.
+[564.54]  OK, so all these.
+[571.70]  So what is an ordinary differential equation?
+[576.50]  So this is an equation involving an independent variable.
+[593.30]  Let's call it x and a function of x, which we call it y.
+[610.90]  So y, this would be the dependent variable.
+[621.06]  And the derivatives of y with respect to x.
+[631.82]  So for example, dy dx, d squared y dx squared, et cetera.
+[641.86]  So the order of the highest derivative that occurs, we call that the order of the differential
+[648.50]  equation.
+[650.50]  So for example, the simplest of ODE would be something of the form dy dx equals some function in x.
+[676.22]  So dy dx equals f of x, you can solve that by direct integration.
+[681.74]  So this can be solved.
+[688.74]  So y equals, so y you can think of y as being the anti derivative of f of x.
+[703.22]  And then we can use integrations.
+[706.58]  That's the simplest kind of differential equation that we can have.
+[713.66]  And this is the reason why we'll start the course by reviewing a little bit of integration techniques.
+[722.22]  But more interesting, there could be more interesting differential equations.
+[727.06]  So let me give you some examples from physical sciences.
+[735.70]  So for example, from mechanics, this is something that you have all seen.
+[744.58]  You can have Newton's second law, which says that the force is the mass times
+[756.82]  the acceleration.
+[758.06]  So A is the acceleration.
+[766.94]  But then the acceleration is a derivative of the velocity with respect to time.
+[783.50]  So that's already a differential equation.
+[786.54]  But it could be a second order differential equation if you think that V is dT, where R is the displacement.
+[804.30]  Then you get, for example, A is the R, the squared R, dT squared, which is a second order differential equation.
+[814.26]  So that's an easy example of how differential equations appear in mechanics.
+[822.98]  Well, you could also have differential equations in engineering, or if you have an electrical circuit.
+[841.30]  So if I take a simple one, so a simple series circuit, which, for example, an RLC circuit,
+[854.58]  which means that it has the following components.
+[859.22]  It has R stands for resistor.
+[863.14]  So it has a resistor R. It has an inductor L with inductance L.
+[874.78]  And it has a capacitor with capacitance C. And it has a source of voltage, something like a battery V.
+[893.02]  So here's, so I have a capacitor with C capacitance.
+[902.66]  And the resistor with R resistance.
+[910.26]  And an inductor with L inductance.
+[920.82]  So here R, R, L, and C are constants.
+[927.82]  They're independent of time.
+[933.22]  But then I'm interested, for example, in the current across the circuit.
+[940.10]  So this is the current across I of t is the current across the circuit,
+[949.26]  which is a function of the time.
+[957.90]  So in terms of differential equations, t the time would be the independent variable.
+[963.10]  And this I of t, for example, is a dependent variable.
+[967.70]  I can also have Q of t, which is the charge across the capacitor, sorry, on the capacitor.
+[985.86]  And the relation between the two of them is that I is dQ dt.
+[996.30]  So Kirchhoff's law says that the total voltage is 0 around the circuit,
+[1010.34]  which is in another way the voltage V from the battery, which is a function of t,
+[1020.62]  equals the voltage across the resistor plus the voltage across the inductor plus the
+[1027.42]  voltage on the capacitor.
+[1030.62]  And now you write each one of them.
+[1036.98]  The voltage across the resistor by Ohm's law is R times I of t.
+[1051.42]  The one on the capacitor is just 1 over C times the charge.
+[1060.70]  And for the inductor is L, the constant times dI dt, which is Faraday's law.
+[1077.10]  So now I can express, for example, so I have an equation involving V, I and Q.
+[1087.90]  But I is dQ dt, so I can rewrite everything in terms of Q, for example.
+[1093.94]  So I can get a differential equation in Q, which will be simply, so this would be the
+[1110.14]  leading term, dI dt.
+[1112.54]  So L times dI dt becomes L times d squared Q dt squared plus R i is R times dQ dt plus 1 over
+[1127.58]  C times Q equals V.
+[1131.62]  So that is a second order differential equation that appears in electrical circuits.
+[1145.66]  So it's second order because the highest derivative is of second order.
+[1150.90]  It has constant coefficients because the constants are L, R, and C are constant.
+[1158.30]  And it's what we'll call in homogeneous because this doesn't have to be zero.
+[1165.82]  So those are the type of differential equations that we can study.
+[1173.18]  And there are many other examples, so I'll leave one as an exercise for you.
+[1181.98]  An easy exercise.
+[1186.18]  I'll tell you the problem is the rate at which a radioactive substance decays is proportional
+[1214.06]  to the remaining number of atoms.
+[1226.66]  So I want you to, as an exercise, to write a differential equation that describes this
+[1233.70]  situation.
+[1236.54]  So we'll come back to things like this later.
+[1240.82]  So the question is, what's the differential equation?
+[1252.30]  OK.
+[1260.78]  So as you progress along in this course, in the mathematics course here, you will encounter
+[1268.22]  very, very interesting and sophisticated differential equations in applied mathematics.
+[1275.58]  So we're just scratching the surface a little bit.
+[1281.02]  All right.
+[1282.02]  Now going back to what I said before, the simplest kind of OD is dy dx equals f of x,
+[1291.42]  which you can solve by direct integration.
+[1295.14]  So let me review a couple of facts about integration.
+[1301.86]  So one of the most useful techniques, which I'm sure most of you are quite familiar with,
+[1308.50]  is integration by parts.
+[1324.46]  So does integration by parts come from?
+[1328.02]  Well, it comes from the product rule, product or live needs rule, if you want to sound fancy
+[1338.46]  for derivatives.
+[1347.02]  So if I have two functions, f and g, and I multiply them, and then I differentiate,
+[1354.02]  and so fg times g prime is f prime g plus fg prime, which means that fg, f times g prime equals
+[1368.74]  f times g prime minus f prime times g.
+[1376.54]  And if I integrate both sides, then I end up with the integration by parts, which is
+[1389.48]  f times g prime dx, if their functions of x equals f times g minus f prime times g dx.
+[1406.28]  So this is the version, the indefinite interblow version.
+[1410.84]  You can have a definite interblow version where you put the limits of integration.
+[1420.56]  So let me spell it out.
+[1427.64]  So this is the definite interglow version.
+[1434.76]  All right.
+[1436.64]  So let's do a couple of examples.
+[1449.00]  So the first example.
+[1455.48]  So suppose I want to integrate x squared sine x.
+[1467.28]  So this would solve, so this gives the solution to dy dx equals x squared sine x.
+[1485.28]  So in the integration by parts, you have to decide which one is f and which one's g.
+[1493.88]  Now clearly I would like to decrease the power here.
+[1498.60]  I know I can never get rid of the sine by differentiation.
+[1502.64]  So then maybe this, then I have to do this f and this is g prime, which means that g
+[1511.76]  is minus cos x.
+[1515.80]  So if I call this interblow i, i is x squared times minus cos x and then minus the derivative
+[1529.20]  of f, which is 2x times minus cos x dx.
+[1537.40]  This is minus x squared cos x plus 2 times x cos x dx.
+[1549.40]  And now again, this should be f and this should be g prime.
+[1557.44]  So cos x plus 2 times x sine x minus 2 times sine x dx.
+[1572.72]  So please try to follow through what I'm doing.
+[1576.12]  And let me know if I make a mistake.
+[1578.36]  This is my nightmare to do integrals like this while I'm being filmed.
+[1585.28]  Right?
+[1586.28]  Exactly what I like to do.
+[1589.96]  So 2x sine x and then minus cos x, then plus c.
+[1600.72]  Is this?
+[1603.56]  So plus, plus, thank you.
+[1609.20]  Good.
+[1612.20]  As I said.
+[1614.60]  So c here denotes a constant because we're doing indefinite integrals.
+[1625.24]  All right.
+[1626.00]  Let's do another example.
+[1645.44]  So again, an indefinite integral 2x minus 1 times ln x squared plus 1 dx.
+[1653.92]  OK.
+[1656.92]  What do you think?
+[1663.40]  Which one should be f and which one should be g or g prime?
+[1669.28]  Say that again.
+[1674.60]  Right.
+[1678.88]  So this, I want to differentiate to get rid of the logarithm.
+[1682.48]  So I should call this f, which means that this is going to be g prime.
+[1685.92]  Thank you.
+[1688.36]  And that makes g x squared minus x.
+[1693.68]  So this becomes x squared minus x times ln x squared plus 1 minus the integral of x squared
+[1703.40]  minus x times the derivative of the natural log of x squared plus 1, which is 2x over x squared
+[1715.36]  plus 1 dx.
+[1718.20]  So finally this term, what do I do here?
+[1728.32]  Good.
+[1728.88]  So we do a long division.
+[1733.44]  So let's rewrite it versus this x squared minus x ln x squared plus 1.
+[1740.92]  And then minus 2x cubed minus x squared over x squared plus 1 dx.
+[1748.60]  So I have to remember how to do long division.
+[1753.80]  So I have x cubed minus x.
+[1758.68]  Now, depending how you learn this, you will draw the long division in different ways.
+[1766.48]  So you just do it your way.
+[1768.80]  And now I'll do it my way.
+[1771.52]  So that's x minus x cubed minus x squared minus x minus x minus 1.
+[1795.80]  OK, so this means that x cubed minus x squared over x squared plus 1 equals x minus 1 plus
+[1808.88]  minus x plus 1 over x squared plus 1.
+[1816.44]  Did you get the same thing?
+[1820.64]  OK, so let's call this integral j.
+[1824.28]  And now we compute j, the integral of x minus 1 plus minus x plus 1 over x squared plus
+[1836.08]  1 dx, which equals x squared minus 1, half x squared minus x.
+[1849.20]  And then how do I integrate this term, the fraction?
+[1861.84]  So I should split x over x squared plus 1 dx.
+[1873.16]  And let me write the last term plus dx over x squared plus 1.
+[1882.08]  So this one, the last term, we should recognize that what is it?
+[1887.64]  R10 or 10 inverse, depending how you want to denote it.
+[1892.40]  This is R10 of x, just 10 inverse of x.
+[1900.08]  So what do we do with this?
+[1903.04]  We can substitute.
+[1906.24]  Yeah, let's do that so that we remember how to do substitutions.
+[1914.80]  You might just look at it and know what it is, right?
+[1917.12]  But just to review substitution, if I said u equals x squared plus 1, then du equals 2x,
+[1926.60]  dx, du dx equals 2x, which means that this is 1, half du over u, which is 1, half ln of u,
+[1944.44]  which is 1, half ln of x squared plus 1.
+[1949.32]  That you might have guessed just because you have enough practice.
+[1954.76]  Some of you.
+[1957.68]  OK, so now let's put them all together.
+[1959.92]  So j is 1, half x squared minus x minus 1, half ln x squared plus 1 plus 10 inverse of x
+[1976.08]  and some constant, which means that the original integral in the beginning, which I should
+[1990.24]  have called i, so that I don't have to roll down the boards, but equals x squared minus
+[2002.52]  x ln x squared plus 1 minus twice this.
+[2011.72]  So minus x squared plus 2x plus ln x squared plus 1 minus 10 inverse x and then plus c.
+[2030.40]  Thank you.
+[2031.88]  Any other mistakes?
+[2032.88]  All right.
+[2038.88]  OK.
+[2049.08]  So that's an integral.
+[2053.08]  There are cases when integration by parts will not simplify either of the two functions
+[2060.84]  of f and g, but what happens is if you do it twice, then you sort of come back to what
+[2066.92]  you started with.
+[2067.92]  So the typical example is i equals the integral e to the x sin x dx.
+[2088.84]  So maybe we don't need to go through the entire calculation.
+[2096.72]  This is in the lecture notes as well, but how would you solve it?
+[2108.32]  Right.
+[2109.32]  So you do it.
+[2110.80]  So for example, I can say that this is g prime and this is f.
+[2118.32]  And then I integrate, I get cos, and then I do it again, and I will end up with some expression
+[2124.16]  minus this integral, and then I solve for it.
+[2127.96]  So you do this and you get the answer to be something like 1 half e to the x sin x minus
+[2135.96]  cos x, then plus constant.
+[2152.32]  So another type of examples, which are more difficult, are the ones which you cannot solve
+[2161.92]  in just one go, but you have to find the recursive formula.
+[2166.24]  So I'll just do an example like that.
+[2169.96]  You've seen other examples before.
+[2173.44]  So this is when we get a reduction, or if you want to call it a recursive formula.
+[2191.68]  So I start, suppose I'm looking at this integral cosine to the n x dx.
+[2203.84]  Now I want to label this integral i n because I'm going to get a formula of i n in terms
+[2212.52]  of i n minus 1 or i n minus 2, et cetera.
+[2220.04]  Now there is not much choice here what you should call f and what you should call g.
+[2226.24]  So I'm going to just do it.
+[2229.12]  So this is cos n minus 1 x times cos x dx.
+[2236.08]  So this is f and this is g prime.
+[2240.00]  And we get cos n minus 1 x sin x minus the integral.
+[2250.88]  Now I need to differentiate f.
+[2253.68]  So n minus 1 cos n minus 2 x.
+[2258.24]  And then minus sin x.
+[2262.04]  And then another sin x dx.
+[2268.84]  Which equals cos n minus 1 x sin x minus n minus 1 times, or maybe I'll make it a plus,
+[2282.40]  cos n minus 2 x sin squared x dx.
+[2292.56]  So if I write it like that, what do you do now?
+[2299.96]  Write sin squared as 1 minus cos squared x.
+[2308.24]  Which then gives you cos n minus 1 x sin x plus n minus 1, the integral of cos n minus
+[2319.96]  2 x dx minus n minus 1, the integral of cos n squared x dx.
+[2333.12]  So now I recognize that this is the integral of cos n minus 2 is i sub n minus 2.
+[2343.08]  And the integral of cos n, this is i n.
+[2349.08]  So I have i n equals that.
+[2352.44]  So if I solve for i n, we get i n equals, so I get n i n equals cos n minus 1 x sin x
+[2376.56]  plus n minus 1 i n minus 2.
+[2382.84]  Which gives me the recursive formula.
+[2391.44]  i n equals 1 over n, cos n minus 1 x sin x plus n minus 1 over n i n minus 2.
+[2407.52]  So this is true for all n greater than or equal to 2.
+[2431.24]  Now if I want to know all of these integrals, i n using this formula, what else do I need
+[2438.88]  to know?
+[2442.68]  i 0 and i 1 because it drops down by 2.
+[2448.80]  So let's compute i 0 and i 1.
+[2451.88]  So we also need i 0 and i 1.
+[2460.76]  So i 0 would be just the integral dx, which is x plus a c.
+[2470.76]  And i 1 is the integral of cos x dx, which is sin x plus a c.
+[2482.40]  And now with this, you can get any integral you want.
+[2488.28]  For example, if you want to get i 6, you just follow that and you get that it's 1 6th
+[2507.88]  cos to the 5th sin x plus 5 over 6 times i 4, which is 1 over 6 cos sin x plus 5 over
+[2526.56]  6 times i 4 is 1 4th cos cubed x sin x plus 3 4th i 2.
+[2544.40]  And then what's i 2?
+[2547.40]  i 2 is 1 half cos x sin x plus 1 half i 0, i 0 is x.
+[2560.04]  So you put your substitute this in there and they get that i 6 is 1 6th cos to the 5th
+[2569.08]  sin x plus 5 over 24 cos cubed x sin x plus 5 times 3 times 1 over 6 times 4 times 2 cos
+[2588.44]  x sin x plus 5 times 3 over 6 times 4 times 2 x.
+[2613.68]  So, I think you can probably cook up a general formula using this example.
+[2621.16]  You see how it goes.
+[2622.40]  So if I ask you to write a sum involving all the terms, I think you can get the coefficients
+[2630.04]  of each term inductively.
+[2637.84]  So this is a quick review of integration by parts.
+[2643.72]  If you're not fully comfortable with these examples or similar examples, then get an
+[2652.32]  integration textbook and do a few more examples with integration by parts, substitutions,
+[2658.20]  and so on.
+[2659.60]  Because differential, what we will do in solving differential equations will learn a lot
+[2664.36]  of techniques, but ultimately you will have to integrate some functions.
+[2669.64]  So you should be able to do that.
+[2671.84]  So what we'll learn is how to reduce the problem to integrating various functions.
+[2678.40]  But you'll have to be able to do that.
+[2684.56]  So we discussed about the simplest kind of ODEs, which can be solved just by direct
+[2696.28]  integration.
+[2697.72]  The next simplest ODEs are the so-called separable.
+[2725.80]  So we had the case dy dx equals f of x, which you can just integrate.
+[2731.92]  The next case would be dy dx equals a of x times b of y.
+[2744.64]  So what I mean by that is that this is a function only in x, only, and b of y is a function
+[2761.08]  of y only.
+[2770.80]  If you have a situation like that, then you can reduce it to the direct integration with
+[2776.76]  one simple trick.
+[2779.00]  If dy is not zero, then you divide by it, and you get 1 over b of y dy dx equals a x.
+[2799.36]  And now you can integrate just as we did before.
+[2810.68]  So you'll get then the integral dx.
+[2823.08]  So the left hand side is the integral dy over b of y, and the right hand side is a x dx.
+[2830.28]  And now you have two direct integrations, which hopefully we can solve.
+[2838.80]  The type of integrals that we have in this course will be the kind for which you can
+[2844.40]  apply integration by parts or some other techniques and solve them.
+[2848.08]  If I were to write an arbitrary function there and ask you how to integrate it, then we
+[2854.60]  can't do that in a closed formula.
+[2861.12]  So here's an example.
+[2873.20]  In the general solution to the separable differential equation, so the hint is already
+[2893.64]  in the problem that this is a separable differential equation x times y squared minus 1 plus y
+[2902.48]  x squared minus 1 dy dx equals to zero.
+[2909.72]  And x is between zero and 1 to avoid some issues about continuity or whatnot.
+[2928.84]  How do you separate this differential equation?
+[2934.44]  How do you separate the variables?
+[2944.72]  So I think you're about two steps ahead of me.
+[2951.08]  But it's correct.
+[2953.04]  Let me do it step by step.
+[2954.36]  So what I will do is first isolate that.
+[2958.60]  So I have y x squared minus 1 dy dx equals minus x y squared minus 1.
+[2969.96]  And then separate the variables.
+[2973.76]  As the name suggests, you have y over y squared minus 1 dy dx equals minus x over x squared
+[2987.76]  minus 1.
+[3012.20]  What do we do now?
+[3024.96]  So if we look at this, then, so we integrate, let's integrate, well, let me write one more.
+[3032.24]  So we integrate this and we get y over y squared minus 1 dy equals minus x over x squared
+[3041.24]  minus 1 dx.
+[3048.76]  So now we could do a substitution as we did before, but I think we know how to do it.
+[3055.28]  This looks like the derivative of a logarithm.
+[3058.56]  So if I differentiate ln of x squared minus 1, then I get 2x over x squared minus 1.
+[3070.24]  So except x is between 0 and 1.
+[3076.44]  So maybe it's better to write this as 1x over 1 minus x squared.
+[3081.76]  And get rid of the minus sign.
+[3086.60]  So then I'll do 1 minus x squared minus 2x over 1 minus x squared.
+[3095.12]  So then this is minus ln of 1 minus x squared and the half and then plus c.
+[3113.48]  Whereas here, I'll have to put absolute values because I don't know.
+[3117.32]  It's 1 half ln of y squared minus 1 in absolute value.
+[3131.32]  Now, the easiest way to write this is to get rid of the logarithm by moving this to the
+[3136.40]  other side using the properties of the logarithm and exponentiate.
+[3142.16]  So let's do that.
+[3143.20]  So we have 1 half.
+[3146.20]  If I move the logarithm in x to the left hand side, then I use the property.
+[3158.12]  Well, it doesn't matter much equals c, which means that the equation will be y squared
+[3175.56]  minus 1 times 1 minus x squared, absolute value equals, it would be in to c squared.
+[3188.04]  Or e to 2c, which I can just call another kind of c.
+[3200.60]  And this would be a positive number.
+[3206.20]  So the equation that we get is, so the answer then is that.
+[3231.12]  Where c is positive.
+[3234.48]  But I can relax that.
+[3236.08]  This is always positive because 1 minus x squared is always positive because I'm assuming
+[3241.84]  x is between 0 and 1.
+[3244.72]  But I can rewrite the answer in a nicer form by dropping the absolute value and dropping
+[3255.12]  the assumption on c.
+[3257.60]  So another way of doing this is, well, for uniformity, I will write it as 1 minus y squared
+[3273.76]  equals c.
+[3276.84]  So 1 minus y squared times 1 minus x squared equals c.
+[3282.00]  No assumption on c except, so c could be both positive or negative, except in this formula,
+[3290.92]  it looks like it can't be 0.
+[3295.40]  Right?
+[3296.40]  Here I got an exponential, which is never 0.
+[3300.28]  So this is positive.
+[3303.12]  I drop the absolute value and the cost is that now c can also be negative.
+[3311.80]  But somehow 0 is missing.
+[3313.28]  How is that possible?
+[3314.76]  That doesn't look like solid mathematics.
+[3319.52]  Yes?
+[3325.96]  That's right.
+[3327.96]  Okay, so where did I lose that case?
+[3335.36]  Right here.
+[3336.52]  So I divided by y squared minus 1.
+[3341.20]  I did that ignoring the case when y squared minus 1 is 0.
+[3350.32]  So let's call this star here.
+[3354.28]  So in star, y minus 1 is not 0.
+[3364.44]  But if we need to allow that, because it is possible for y to be plus or minus 1, for example,
+[3374.32]  if y is the constant function 1, then this is 0, dy dx is 0, so that's okay.
+[3382.92]  So if we allow, if y is plus minus 1 is included in the solution, if we allow c to be 0,
+[3404.96]  in the answer.
+[3415.68]  So then the bottom line is that the answer is this implicit equation in y and x, where c
+[3425.96]  can be any constant.
+[3436.80]  Good?
+[3441.00]  So be careful when you divide by the function in y, as I said here, you can do that if you
+[3449.48]  know that's not 0.
+[3451.16]  But sometimes you get solutions from it being 0.
+[3454.08]  So you have to be careful there.
+[3456.84]  All right, that's the end of the first lecture.
+[3458.88]  I'll see you tomorrow for the second lecture and we'll do more differential equations.

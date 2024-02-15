@@ -25,7 +25,7 @@ ActionOnlineStatus=False
 
 
 model = YOLO("yolov8n.pt").to(device)
-model2 = YOLO("model/best.pt").to(device)
+model2 = YOLO("D:/Model/EMOT/model/best.pt").to(device)
 
 
 ActionOnlineStatus=True

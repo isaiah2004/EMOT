@@ -1,1 +1,7 @@
+env
+outputs
+videos
+src/output.avi
+src/__pycache__
+src/yolov8n.pt
 ./one.csv
