@@ -1,6 +1,6 @@
 import cv2
 import time
-from label import label_cam
+from Classifier.label import label_cam
 
 # start webcam
 cap = cv2.VideoCapture(0)

@@ -1,4 +1,4 @@
-one
-two
-looking foward
-four
+looking left
+looking down
+looking right
+looking straight

@@ -2,9 +2,24 @@ import streamlit as st
 import cv2
 import pandas as pd
 from datetime import datetime
-from label import label_cam
+from Classifier.label import label_cam
+from speech.video_to_transcript import split_video_and_transcribe
+import tempfile
+import os
 
 collected_data = []
+st.title("App with Video Upload and Live Action Detection")
+
+uploaded_file = st.file_uploader("Choose a video file", type=["mp4", "avi", "mov"])
+
+if uploaded_file is not None:
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.mp4') as tmpfile:
+        tmpfile.write(uploaded_file.getvalue())
+        output_directory = tempfile.mkdtemp()
+        transcript_path = split_video_and_transcribe(tmpfile.name, output_directory)[1]
+        with open(transcript_path, 'r') as file:
+            transcript = file.read()
+        st.text_area("Transcript", transcript, height=250)
 
 def main():
     st.title("Live Action Detection")
